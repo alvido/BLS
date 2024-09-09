@@ -1,11 +1,18 @@
 .header {
+    position: relative;
 
     &__top {
+        @include flex-center;
         padding-block: 15px;
         background: var(--color-black);
         color: var(--color-white);
 
+        @include tablet {
+            height: 64px;
+        }
+
         & .wrapper {
+            width: 100%;
             justify-content: space-between;
         }
     }
@@ -15,7 +22,8 @@
         display: none;
 
         @include tablet {
-            display: block;
+            @include flex-center;
+            justify-content: space-between;
         }
     }
 
@@ -33,12 +41,20 @@
         font-size: 24px;
         font-weight: 700;
 
+        @include mobile {
+            display: none;
+        }
+
         @include hover {
             color: var(--color-orange);
         }
     }
 
     & .lang {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 24px;
 
         &__link {
             font-family: "Inter";

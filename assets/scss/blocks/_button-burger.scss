@@ -5,7 +5,7 @@
 
     width: 45px;
     height: 30px;
-    z-index: 2;
+    z-index: 1;
 
     &::before,
     &::after {
@@ -16,8 +16,7 @@
         background: var(--color-black);
 
         position: absolute;
-        left: 50%;
-        translate: -50% 0;
+        left: 0%;
         transition: all .3s ease;
     }
 
@@ -26,6 +25,7 @@
     }
 
     &::after {
+        width: 30px;
         bottom: 0px;
     }
 

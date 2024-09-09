@@ -11,4 +11,10 @@
         max-width: 70px;
         }
     }
+
+    &.mobile__logo {
+        & img {
+            max-width: 140px;
+        }
+    }
 }
