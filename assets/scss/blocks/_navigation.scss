@@ -1,6 +1,8 @@
 .navigation {
-    @include flex-center;
-    gap: 50px;
+
+    @include tablet {
+        display: none;
+    }
 
     @include mobile {
         padding: 40px 24px;
@@ -22,15 +24,18 @@
 
     &__list {
         @include flex-center;
-        gap: 60px;
+        gap: clamp(1.25rem, -6.442rem + 12.02vw, 4.375rem);
 
         & li {
             & a {
                 position: relative;
                 display: block;
-                font-weight: 500;
 
-                &::after{
+                font-family: "Inter";
+                font-size: 20px;
+                text-transform: uppercase;
+
+                &::after {
                     content: '';
                     position: absolute;
                     left: 50%;
@@ -38,12 +43,12 @@
                     translate: -50% 0;
                     width: 0;
                     height: 2px;
-                    background: var(--color-black);
+                    background: var(--color-orange);
                     transition-duration: var(--transition-duration);
                 }
 
                 @include hover {
-                    color: var(--color-black);
+                    color: var(--color-orange);
 
                     &::after {
                         width: 100%;

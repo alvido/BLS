@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ua">
 
 <head>
     <meta charset="UTF-8">
@@ -9,36 +9,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Title</title>
-    <link rel="icon" type="image/png" href="assets/images/header/logo.png">
+    <title>BLS</title>
+    <link rel="icon" type="image/png" href="assets/images/header/light.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
     <header class="header">
-        <div class="wrapper container">
-            <a href="index.html" class="header__logo logo">
-                <img src="assets/images/header/logo.svg" alt="logo">
-            </a>
-            <nav class="header__navigation navigation">
-                <ul class="navigation__list">
-                    <li>
-                        <a href="about.html">About </a>
-                    </li>
-                    <li>
-                        <a href="partnership.html">Partnerships </a>
-                    </li>
-                    <li>
-                        <a href="contact.html">Contact </a>
-                    </li>
-                </ul>
-            </nav>
+        <div class="header__top">
+            <div class="wrapper container">
+                <a href="index.html" class="header__logo logo">
+                    <img src="assets/images/header/logo.svg" alt="logo">
+                </a>
+                <nav class="header__navigation navigation">
+                    <ul class="navigation__list">
+                        <li>
+                            <a href="about.html">Для клієнтів </a>
+                        </li>
+                        <li>
+                            <a href="partnership.html">Виробництво</a>
+                        </li>
+                        <li>
+                            <a href="contact.html">ПРОЕКТИ</a>
+                        </li>
+                        <li>
+                            <a href="contact.html">Контакти</a>
+                        </li>
+                    </ul>
+                </nav>
+                <a class="header__contact" href="tel:+380 00 000 00 00">+380 00 000 00 00</a>
+                <div class="header__lang lang">
+                    <a class="lang__link active" href="#">uk</a>
+                    |
+                    <a class="lang__link" href="#">en</a>
+                </div>
+            </div>
+        </div>
+        <div class="header__bottom container">
             <button class="burger" id="burgerButton">
                 <span>
                     Menu
                 </span>
             </button>
+            <nav class="mobile__navigation navigation">
+                <ul class="navigation__list">
+                    <li>
+                        <a href="about.html">Головна</a>
+                    </li>
+                    <li>
+                        <a href="about.html">Для клієнтів</a>
+                    </li>
+                    <li>
+                        <a href="partnership.html">Виробництво</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">ПРОЕКТИ</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Контакти</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
     </header>
 

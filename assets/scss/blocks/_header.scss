@@ -1,11 +1,23 @@
 .header {
-    position: relative;
-    padding: 20px 0;
 
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    text-align: center;
+    &__top {
+        padding-block: 15px;
+        background: var(--color-black);
+        color: var(--color-white);
+
+        & .wrapper {
+            justify-content: space-between;
+        }
+    }
+
+    &__bottom {
+        padding-block: 20px;
+        display: none;
+
+        @include tablet {
+            display: block;
+        }
+    }
 
     &.fixed {
         position: fixed;
@@ -14,5 +26,34 @@
         top: 0;
         z-index: 2;
         background: var(--color-white);
+    }
+
+    &__contact {
+        font-family: "Inter";
+        font-size: 24px;
+        font-weight: 700;
+
+        @include hover {
+            color: var(--color-orange);
+        }
+    }
+
+    & .lang {
+
+        &__link {
+            font-family: "Inter";
+            font-size: 20px;
+            color: var(--color-gray);
+            text-transform: uppercase;
+
+            @include hover {
+                color: var(--color-orange);
+            }
+
+            &.active {
+                color: var(--color-white);
+            }
+        }
+
     }
 }
