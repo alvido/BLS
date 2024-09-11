@@ -40,6 +40,7 @@
             justify-content: space-between;
             gap: 8px;
             border: 1px solid var(--color-black);
+            border-radius: var(--border-radius-small);
 
             @include mobile {
                 width: calc(50% - 8px);
@@ -53,6 +54,43 @@
                 text-align: center;
                 @include fluid-text(24, 12);
                 font-weight: 600;
+            }
+        }
+    }
+}
+
+.sertificate {
+    & .partners__list {
+        margin-top: 30px;
+
+        @include mobile {
+            margin-top: 50px;
+            gap: 5px;
+            justify-content: space-between;
+        }
+
+        & li {
+            padding: 10px 24px;
+            position: relative;
+
+            @include mobile {
+                width: calc(33% - 4px);
+                padding: 5px;
+            }
+
+            @include phone {
+                width: calc(33% - 4px);
+            }
+
+            & p {
+                position: absolute;
+                left: 50%;
+                bottom: -50px;
+                translate: -50% 0;
+
+                @include mobile {
+                    bottom: -20px;
+                }
             }
         }
     }

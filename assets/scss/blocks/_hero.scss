@@ -78,19 +78,40 @@
             gap: 90px;
             margin-bottom: 50px;
 
+            @include tablet {
+                gap: 30px;
+            }
+
+            @include mobile {
+                flex-direction: column;
+                margin-bottom: 32px;
+            }
+
             & h1 {
                 color: var(--color-orange);
+
+                @include mobile {
+                    align-self: flex-end;
+                }
             }
         }
     }
 
     &--project {
         & h1 {
-            margin-bottom: 90px;
+            margin-bottom: clamp(1.875rem, 0.625rem + 5.56vw, 5.625rem);
+        }
+
+        & .hero__img {
+            object-fit: cover;
+            @include mobile {
+                height: 480px;
+                object-position: left;
+            }
         }
 
         & p {
-            margin: 60px 0 0 auto;
+            margin: clamp(1.875rem, 1.25rem + 2.78vw, 3.75rem) 0 0 auto;
             max-width: 700px;
             text-align: end;
         }

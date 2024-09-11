@@ -16,12 +16,28 @@
     }
 
     &__inner {
+        position: relative;
         margin-top: clamp(2rem, 1.208rem + 3.52vw, 4.375rem);
         display: flex;
         gap: clamp(1.25rem, -7.981rem + 14.42vw, 5rem);
 
         @include tablet {
             flex-direction: column;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: -15px;
+            bottom: -150px;
+            z-index: 1;
+            width: 60%;
+            height: 600px;
+            background: url(/assets/images/clients/Artboard.png) no-repeat center / contain;
+
+            @include tablet {
+                display: none;
+            }
         }
 
         & .column {
@@ -32,7 +48,12 @@
             }
 
             & img {
+                display: none;
                 margin-top: clamp(1.25rem, 0.833rem + 1.85vw, 2.5rem);
+
+                @include tablet {
+                    display: block;
+                }
             }
         }
     }

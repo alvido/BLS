@@ -1,6 +1,14 @@
 .header {
     position: relative;
 
+    @include mobile {
+
+        & .header__logo,
+        & .header__lang {
+            display: none
+        }
+    }
+
     &__top {
         @include flex-center;
         padding-block: 15px;
@@ -49,27 +57,27 @@
             color: var(--color-orange);
         }
     }
+}
 
-    & .lang {
-        display: flex;
-        align-items: center;
-        gap: 6px;
-        font-size: 24px;
+.lang {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 24px;
 
-        &__link {
-            font-family: "Inter";
-            font-size: 20px;
-            color: var(--color-gray);
-            text-transform: uppercase;
+    &__link {
+        font-family: "Inter";
+        font-size: 20px;
+        color: var(--color-gray);
+        text-transform: uppercase;
 
-            @include hover {
-                color: var(--color-orange);
-            }
-
-            &.active {
-                color: var(--color-white);
-            }
+        @include hover {
+            color: var(--color-orange);
         }
 
+        &.active {
+            color: var(--color-white);
+        }
     }
+
 }
