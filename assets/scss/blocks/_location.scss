@@ -1,0 +1,90 @@
+.location {
+    color: var(--color-white);
+    background: var(--color-orange);
+
+    & .wrapper {
+
+        @include tablet {
+            flex-direction: column;
+        }
+
+        & .column {
+            width: 50%;
+
+            @include tablet {
+                width: 100%;
+            }
+
+            & .map {
+                width: 100%;
+                display: block;
+
+                @include tablet {
+                    height: 600px;
+                }
+
+                @include mobile {
+                    height: 400px;
+                }
+            }
+        }
+    }
+
+    &__content {
+        padding: clamp(1.875rem, 0.417rem + 6.48vw, 6.25rem) clamp(2.5rem, -3.654rem + 9.62vw, 5rem);
+    }
+
+    &__info {
+        margin-top: clamp(3.125rem, -0.208rem + 14.81vw, 13.125rem);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px clamp(1.25rem, -4.904rem + 9.62vw, 3.75rem);
+
+        @include tablet {
+            gap: 20px;
+        }
+
+        @include phone {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        & .info__item {
+            max-width: 280px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            @include fluid-text(24, 20);
+            font-weight: 500;
+
+            &:nth-child(2) {
+                order: 1;
+
+                @include mobile {
+                    order: inherit;
+                }
+            }
+
+            &:last-child {
+                order: 2;
+
+                @include mobile {
+                    order: inherit;
+                }
+            }
+
+            & span {
+                @include fluid-text(16, 14);
+                font-weight: 500;
+                opacity: .7;
+            }
+
+            & a {
+                @include hover {
+                    color: var(--color-black);
+                }
+            }
+
+
+        }
+    }
+}

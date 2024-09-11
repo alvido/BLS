@@ -6,6 +6,7 @@ $container: 1440;
     /*colors*/
     --color-black: #000000;
     --color-white: #ffffff;
+    --color-white-alt: #F7F7FB;
 
     --color-orange: #E84E1C;
     --color-gray: #848484;
@@ -26,7 +27,7 @@ $container: 1440;
     /*border*/
 
     /*body*/
-    --font-family-base: "Montserat", sans-serif;
+    --font-family-base: "Montserat", system-ui;
 
     --container-width: #{$container}px;
     --container-padding-x: 15px;

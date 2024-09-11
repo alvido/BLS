@@ -49,6 +49,101 @@ $(document).ready(function () {
 });
 // Fixed header end
 
+// chevron rotate
+document.addEventListener("DOMContentLoaded", function () {
+  let openConsultationForm = document.getElementById("openConsultationForm");
+  let consultationForm = document.getElementById("consultationForm");
+
+  if (openConsultationForm) {
+    openConsultationForm.addEventListener("click", function (e) {
+      e.stopPropagation();
+      this.classList.toggle("rotate");
+      consultationForm.classList.toggle("open");
+    });
+  }
+});
+// chevron rotate
+
+// play stop video
+document.addEventListener('DOMContentLoaded', () => {
+  const video = document.getElementById('myVideo');
+  const playButton = document.getElementById('playButton');
+
+  // Общая функция для воспроизведения и паузы видео
+  function toggleVideo() {
+    if (video.paused) {
+      video.play();
+      playButton.style.display = 'none'; // Скрыть кнопку
+    } else {
+      video.pause();
+      playButton.style.display = 'block'; // Показать кнопку
+    }
+  }
+
+  // Обработчик для нажатия на видео
+  video.addEventListener('click', toggleVideo);
+
+  // Обработчик для нажатия на кнопку воспроизведения
+  playButton.addEventListener('click', toggleVideo);
+});
+
+
+// play stop video
+
+// animation counter
+document.addEventListener('DOMContentLoaded', () => {
+  const counters = document.querySelectorAll('.counter');
+
+  // Функция для анимации счёта
+  function animateCount(counter) {
+    const target = +counter.getAttribute('data-target');
+    let current = 0;
+    const increment = target / 100; // Делим цель на 100 шагов
+
+    const updateCount = () => {
+      current += increment;
+      if (current < target) {
+        counter.innerText = Math.ceil(current);
+        requestAnimationFrame(updateCount);
+      } else {
+        counter.innerText = target;
+      }
+    };
+
+    updateCount();
+  }
+
+  // Отслеживаем появление элемента на экране
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const counter = entry.target;
+        animateCount(counter);
+        observer.unobserve(counter); // Останавливаем наблюдение после запуска
+      }
+    });
+  }, { threshold: 1.0 }); // Настроено на 100% видимость элемента
+
+  counters.forEach(counter => observer.observe(counter));
+});
+// animation counter
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // // select2
 // // In your Javascript (external .js resource or <script> tag)
 // $(document).ready(function () {

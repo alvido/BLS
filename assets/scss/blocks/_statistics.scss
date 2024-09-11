@@ -1,0 +1,76 @@
+.statistics {
+    padding-block: clamp(3.75rem, 2.604rem + 5.09vw, 7.188rem);
+    display: flex;
+    flex-direction: column;
+
+    & h2 {
+        max-width: 640px;
+        margin-bottom: 40px;
+
+        @include mobile {
+            margin-bottom: 25px
+        }
+    }
+
+    & p.accent-text {
+        @include fluid-text(20, 10);
+        text-transform: uppercase;
+        max-width: 560px;
+        line-height: 1;
+        position: relative;
+        margin-left: 46px;
+
+        @include phone {
+            margin-left: 30px;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: -46px;
+            top: 50%;
+            translate: 0 -50%;
+            width: 30px;
+            height: 30px;
+            background: url(../images/icon/snow.svg) no-repeat center;
+            background-size: cover;
+
+            @include phone {
+                width: 20px;
+                height: 20px;
+                left: -30px;
+            }
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        align-self: flex-end;
+        margin-top: 20px;
+
+        @include mobile {
+            margin-top: 60px;
+        }
+
+        & .counter {
+            @include fluid-text(250, 70);
+            font-weight: 900;
+            line-height: 1;
+        }
+
+        & p {
+            @include fluid-text(20, 14);
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            text-transform: uppercase;
+            color: #151515B2;
+            text-align: right;
+        }
+    }
+
+    & ul {
+        margin-top: clamp(1.563rem, 0.104rem + 6.48vw, 5.938rem);
+    }
+}

@@ -8,7 +8,7 @@ body {
     flex-direction: column;
 
     color: var(--color-black);
-    background: var(--color-white);
+    background: var(--color-white-alt);
 
 
    
@@ -26,10 +26,9 @@ body {
 }
 
 main {
-    overflow: hidden;
     flex: 1;
     display: flex;
-    padding: 20px;
+    flex-direction: column;
 }
 
 a,
@@ -54,13 +53,15 @@ h6 {
 }
 
 h1 {
-    @include fluid-text(42, 10);
-    font-weight: 400
+    @include fluid-text(72, 34);
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 h2 {
-    @include fluid-text(30, 24);
-    font-weight: 400
+    @include fluid-text(68, 34);
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 h3 {
@@ -69,7 +70,9 @@ h3 {
 }
 
 h4 {
-    @include fluid-text(24, 18);
+    @include fluid-text(22, 12);
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
 h5 {

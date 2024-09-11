@@ -1,0 +1,74 @@
+.information {
+    padding: 30px 0;
+    background: var(--color-orange);
+
+    @include mobile {
+        padding: 40px 0;
+    }
+
+    & .wrapper {
+        align-items: flex-start;
+        justify-content: space-between;
+        background: var(--color-white);
+        border-radius: var(--border-radius-small);
+        padding: clamp(1.25rem, -0.625rem + 8.33vw, 6.875rem) clamp(1.875rem, 1.458rem + 1.85vw, 3.125rem) 45px;
+
+        @include mobile {
+            flex-direction: column;
+        }
+    }
+
+    & .info {
+        max-width: 600px;
+        width: 50%;
+
+        @include mobile {
+            width: 100%;
+        }
+
+        & span {
+            font-weight: 500;
+            color: #15151566;
+        }
+
+        & h2 {
+            @include fluid-text(64, 28);
+            text-transform: inherit;
+            margin: 15px 0 70px;
+
+            @include mobile {
+                margin: 10px 0 20px;
+            }
+        }
+    }
+
+    &__form {
+        width: 50%;
+        max-width: 660px;
+
+        @include mobile {
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        & form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            & .button {
+                width: 245px;
+                margin-top: 30px;
+                align-self: flex-start;
+
+                @include mobile {
+                    align-self: flex-end;
+                    margin-top: 20px;
+                    width: 180px;
+                }
+            }
+        }
+    }
+
+
+}

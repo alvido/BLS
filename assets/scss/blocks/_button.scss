@@ -16,6 +16,10 @@
     background: var(--color-orange);
     border: 2px solid var(--color-white);
 
+    @include mobile {
+        height: 55px;
+    }
+
     @include hover {
         background: var(--color-black);
         box-shadow: var(--color-shadow);
@@ -25,6 +29,17 @@
         background: var(--color-black);
 
         @include hover {
+            background: var(--color-orange);
+        }
+    }
+
+    &--white {
+        color: var(--color-black);
+        background: var(--color-white);
+        border: none;
+
+        @include hover {
+            color: var(--color-white);
             background: var(--color-orange);
         }
     }

@@ -1,0 +1,18 @@
+.media {
+    position: relative;
+    padding-block: clamp(3.75rem, 2.604rem + 5.09vw, 7.188rem) 0;
+
+    & video {
+        width: 100%;
+        display: block;
+    }
+
+    &__button {
+        @include abs-center;
+        @include flex-center;
+        @include squere(200px);
+        border-radius: 50%;
+        color: var(--color-orange);
+        border: 1px solid var(--color-orange);
+    }
+}

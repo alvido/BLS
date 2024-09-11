@@ -1,4 +1,4 @@
-.form {
+form {
 
     label {
         display: flex;
@@ -10,48 +10,61 @@
     }
 
     input,
-    select {
+    textarea {
         margin: 0;
-        @include fluid-text(20, 16);
+        padding: 20px 0 16px;
+        @include fluid-text(24, 10);
+        outline: none;
+        font-weight: 600;
+        width: 100%;
+        height: 70px;
+        border: none;
+        border-bottom: 2px solid var(--color-black);
+        resize: none;
+
+        @include mobile {
+            height: 40px;
+            padding: 20px 0 10px;
+        }
+    }
+
+    textarea {
+        @include mobile {
+            height: 70px;
+            padding: 40px 0 10px;
+        }
+    }
+
+    input.consultation,
+    select,
+    textarea.consultation {
+        margin: 0;
+        @include fluid-text(18, 12);
         font-weight: 500;
         outline: none;
         width: 100%;
-        height: 64px;
-        padding: 16px 24px;
+        height: 76px;
+        padding: 12px 20px;
         color: var(--color-black);
-        border-radius: 40px;
-        border: 1px solid rgba(58, 95, 111, 0.16);
+        border-radius: var(--border-radius-small);
+        border: 1px solid var(--color-orange);
 
         &::placeholder {
             color: #3A5F6F;
         }
 
-
-        @include mobile {
-            height: 56px;
+        @include tablet {
+            height: 54px;
         }
 
         &:focus-visible {
-            border: 1px solid var(--color-cyan);
+            border: 1px solid var(--color-black);
         }
     }
 
-    textarea {
-        margin: 0;
-        @include fluid-text(20, 16);
-        font-weight: 500;
-        outline: none;
-        width: 100%;
+    textarea.consultation {
         min-height: 120px;
-        padding: 16px 24px;
-        color: var(--color-black);
-        border-radius: 24px;
-        border: 1px solid rgba(58, 95, 111, 0.16);
         resize: none;
-
-        &:focus-visible {
-            border: 1px solid var(--color-cyan);
-        }
     }
 
     /* Стилизованный radio button */
@@ -100,8 +113,8 @@
 
     /* При отмеченном radio button изменить цвет и показать "галочку" */
     .custom-radio input[type="radio"]:checked+.radiomark {
-        background-color: var(--color-cyan);
-        border: 1px solid var(--color-cyan);
+        background-color: var(--color-orange);
+        border: 1px solid var(--color-orange);
 
         &::after {
             opacity: 1;

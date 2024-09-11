@@ -1,2 +1,37 @@
 .about {
+    padding-block: clamp(3.75rem, 2.604rem + 5.09vw, 7.188rem);
+    display: flex;
+    flex-direction: column;
+
+    & .button {
+        align-self: flex-end;
+        padding: 0 50px;
+
+        @include tablet {
+            height: 50px;
+            padding: 0 30px;
+        }
+
+        @include mobile {
+            height: 30px;
+        }
+    }
+
+    & h2 {
+        max-width: 900px;
+        margin: 50px 0 70px;
+
+        @include mobile {
+            margin: 30px 0;
+        }
+    }
+
+    & p {
+        margin-top: 85px;
+        max-width: 1200px;
+
+        @include mobile {
+            margin-top: 30px;
+        }
+    }
 }

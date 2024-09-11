@@ -1,0 +1,70 @@
+.advantages {
+    padding: clamp(3.75rem, 2.917rem + 3.7vw, 6.25rem) 0;
+
+    & .column {
+        display: flex;
+        flex-direction: column;
+    }
+
+    & .button {
+        align-self: flex-end;
+    }
+
+    & h2 {
+        margin-top: clamp(2rem, 1.625rem + 1.67vw, 3.125rem);
+        max-width: 900px;
+    }
+
+    &__inner {
+        margin-top: clamp(2rem, 1.208rem + 3.52vw, 4.375rem);
+        display: flex;
+        gap: clamp(1.25rem, -7.981rem + 14.42vw, 5rem);
+
+        @include tablet {
+            flex-direction: column;
+        }
+
+        & .column {
+            width: 50%;
+
+            @include tablet {
+                width: 100%;
+            }
+
+            & img {
+                margin-top: clamp(1.25rem, 0.833rem + 1.85vw, 2.5rem);
+            }
+        }
+    }
+
+    &__item {
+        padding: 50px 40px 70px;
+        background: var(--color-orange);
+        border-radius: 20px;
+
+        @include mobile {
+            padding: 30px 15px;
+        }
+
+        & h3 {
+            max-width: 550px;
+            color: var(--color-white);
+            @include fluid-text(38, 24);
+            font-weight: 700;
+            letter-spacing: -0.04em;
+            text-transform: uppercase;
+        }
+    }
+
+    &__content {
+        margin-top: 40px;
+        padding: 16px 32px 70px;
+        background: var(--color-white);
+        border-radius: 20px;
+
+        @include mobile {
+            margin-top: 25px;
+            padding: 30px 15px;
+        }
+    }
+}
