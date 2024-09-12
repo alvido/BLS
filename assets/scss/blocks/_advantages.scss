@@ -33,7 +33,7 @@
             z-index: 1;
             width: 60%;
             height: 600px;
-            background: url(/assets/images/clients/Artboard.png) no-repeat center / contain;
+            background: url(../images/clients/Artboard.png) no-repeat center / contain;
 
             @include tablet {
                 display: none;
